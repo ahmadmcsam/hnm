@@ -1,55 +1,43 @@
-# Hello World Python Project
+# Hello Web App
 
-A simple "Hello, World!" project in Python, showcasing basic structure, testing, and packaging.
+A simple Python web application built with Flask that displays "Hello World Ahmad".
 
 ## Setup
 
 1.  Clone the repository:
-
-    bash
-    git clone <repository_url>
-    cd hello-world-py
-    
+   bash
+   git clone <repository_url>
+   cd hello_web
+   
 
 2.  Create a virtual environment (recommended):
-
-    bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    # venv\Scripts\activate  On Windows
-    
+   bash
+   python3 -m venv venv
+   source venv/bin/activate
+   
 
 3.  Install dependencies:
+   bash
+   pip install -r requirements.txt
+   
 
-    bash
-    pip install -r requirements.txt
-    
-
-## Usage
-
-Run the application:
+## Running the Application
 
 bash
-python src/hello_world/main.py
+python src/app.py
 
 
-## Testing
+Open your web browser and navigate to `http://127.0.0.1:5000` (or the address printed in the console).
 
-Run the tests:
-
-bash
-python -m unittest discover -s tests
+## Project Structure
 
 
-## Packaging
-
-Build the package:
-
-bash
-python setup.py sdist bdist_wheel
-
-
-Install the package:
-
-bash
-pip install dist/hello_world_py-0.1.0-py3-none-any.whl
+hello_web/
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── app.py
+│   └── templates/
+│       └── index.html
+└── tests/
+    └── test_app.py
